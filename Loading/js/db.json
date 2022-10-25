@@ -1,0 +1,263 @@
+{
+    "script": [
+        {
+            "id": 2,
+            "content":  "{let audioEffect2 = document.querySelector('.audio-effect2');let element2 = audioEffect2.querySelectorAll('div');let index2 = 0;setInterval (()=> {effects( element2);}, 200);function effects( arr) {let prev = index2 -1;let next2 = index2 +1;if (prev < 0) {prev = arr.length - 1;};if (next2 > arr.length -1) {next2 = 1;};if (index2 > arr.length -1) {index2 = 0;};arr.forEach(element2 => {element2.classList.remove('middle');element2.classList.remove('adjacent');});arr[prev].classList.add('adjacent');arr[index2].classList.add('middle'); arr[next2].classList.add('adjacent');++index2;};}"
+        },
+        {
+            "id": 3,
+            "content":  "{let audioEffect3 = document.querySelector('.audio-effect3');let element3 = audioEffect3.querySelectorAll('div');let index3 = 0;setInterval (()=> {effects( element3);}, 200);function effects( arr) {let prev3 = index3 -1;let next3 = index3 +1;if (prev3 < 0) {prev3 = arr.length - 1;};if (next3 > arr.length -1) {next3 = 1;};if (index3 > arr.length -1) {index3 = 0;};arr.forEach(element3 => {element3.classList.remove('middle');element3.classList.remove('adjacent');});arr[index3].classList.add('middle');++index3;};}"
+        }
+    ],
+    "style": [
+        {
+         "id": 1,
+         "content":  ".audio-effect1 {display: flex;justify-content: center;align-items: flex-end;gap: 5px;height: 60px;}.audio-effect1 div {display: inline-block;height: 60px;width: 5px;background-color: #fff;}.audio-effect1 div:nth-child(1) {animation: mix1 1s ease infinite 0s;}.audio-effect1 div:nth-child(2) {animation: mix2 1s ease infinite .1s;}.audio-effect1 div:nth-child(3) {animation: mix1 1s ease infinite .2s;}.audio-effect1 div:nth-child(4) {animation: mix2 1s ease infinite .3s;}.audio-effect1 div:nth-child(5) { animation: mix1 1s ease infinite .4s;}.audio-effect1 div:nth-child(6) {animation: mix2 1s ease infinite .5s;}.audio-effect1 div:nth-child(7) {animation: mix1 1s ease infinite .6s;}.audio-effect1 div:nth-child(8) {animation: mix2 1s ease infinite .8s;}@keyframes mix1 {0% {height: 60px;}50% {height: 20px;}100% {height: 60px;}}@keyframes mix2 {0% {height: 60px;}50% {height: 40px;}100% {height: 60px;}}"
+        },
+        {
+         "id": 2,
+         "content":  ".audio-effect2 {display: flex;justify-content: center;align-items: center;gap: 5px;height: 60px;}.audio-effect2 div {display: inline-block;height: 20px;width: 5px;background-color: #fff;}.effects2 {transform: scaleX(1);transition: all 600ms ease;}.adjacent {transform: scaleY(2);}.middle {transform: scaleY(3);}"
+        },
+        {
+         "id": 3,
+         "content":  ".audio-effect3 {display: flex;justify-content: center;align-items: center;gap: 5px;height: 60px;}.audio-effect3 div {display: inline-block;height: 20px;width: 5px;background-color: #fff;}.effects3 {transform: scaleX(1);transition: all 300ms ease;}.adjacent {transform: scaleY(2);}.middle {transform: scaleY(3);}"
+        },
+        {
+         "id": 4,
+         "content":  ".spin-effect4 {display: flex;justify-content: center;margin: 40px auto;}.spin-effect4 div { width: 40px;height: 40px;border: 5px solid #fff;border-radius: 50%;border-left-color: transparent;border-right-color: transparent;animation: spinner 1s ease-in-out infinite;}@keyframes spinner {0% {transform: rotate(0deg);}100% {transform: rotate(360deg);}}"
+        },
+        {
+         "id": 5,
+         "content":  ".spin-effect5 {display: flex;justify-content: center;margin: 40px auto;}.spin-effect5 div {width: 40px;height: 40px;border: 5px solid rgb(183, 183, 183);border-radius: 50%;border-top-color: white;animation: spinner2 1s linear infinite;}@keyframes spinner2 {0% {transform: rotate(0deg);}100% {transform: rotate(360deg);}}"
+        },
+        {
+         "id": 6,
+         "content":  ".spin-effect6 {display: inline-block;position: relative;width: 50px;height: 50px;left: 50%;transform: translateX(-50%);}.spin-effect6 div {box-sizing: border-box;display: block;position: absolute;width: 50px;height: 50px;border: 5px solid #fff;border-radius: 50%;animation: spin-effect6 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;border-color: #fff transparent transparent transparent;}.spin-effect6 div:nth-child(1) {animation-delay: -0.45s;}.spin-effect6 div:nth-child(2) {animation-delay: -0.3s;}.spin-effect6 div:nth-child(3) {animation-delay: -0.15s;}@keyframes spin-effect6 {0%{transform: rotate(0deg);}100%{transform: rotate(360deg);}}"
+        },
+        {
+         "id": 7,
+         "content":  ".spin-effect7 {display: inline-block;position: relative;width: 80px;height: 80px;left: 50%;transform: translateX(-50%);}.spin-effect7 div {animation: spin-effect7 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;transform-origin: 30px 30px;}.spin-effect7 div:after {content: '';display: block;position: absolute;width: 7px;height: 7px;border-radius: 50%;background: #fff;margin: -4px 0 0 -4px;}.spin-effect7 div:nth-child(1) {animation-delay: -0.036s;}.spin-effect7 div:nth-child(1):after {top: 51px;left: 53px;}.spin-effect7 div:nth-child(2) {animation-delay: -0.072s;}.spin-effect7 div:nth-child(2):after {top: 58px;left: 46px;}.spin-effect7 div:nth-child(3) {animation-delay: -0.108s;}.spin-effect7 div:nth-child(3):after {top: 61px;left: 38px;}.spin-effect7 div:nth-child(4) {animation-delay: -0.144s;}.spin-effect7 div:nth-child(4):after {top: 62px;left: 30px;}.spin-effect7 div:nth-child(5) {animation-delay: -0.18s;}.spin-effect7 div:nth-child(5):after {top: 61px;left: 22px;}.spin-effect7 div:nth-child(6) {animation-delay: -0.216s;}.spin-effect7 div:nth-child(6):after {top: 58px;left: 14px;}.spin-effect7 div:nth-child(7) {animation-delay: -0.252s;}.spin-effect7 div:nth-child(7):after {top: 53px;left: 7px;}.spin-effect7 div:nth-child(8) {animation-delay: -0.288s;}.spin-effect7 div:nth-child(8):after {top: 44px;left: 2px;}@keyframes spin-effect7 {0% {transform: rotate(0deg);}100% {transform: rotate(360deg);}}"
+        },
+        {
+         "id": 8,
+         "content":  ".spin-effect8 {display: inline-block;position: relative;width: 80px;height: 80px;left: 50%;transform: translateX(-50%);}.spin-effect8 div {position: absolute;width: 6px;height: 6px;background: #fff;border-radius: 50%; animation: spin-effect8 1.2s linear infinite;}.spin-effect8 div:nth-child(1) {animation-delay: 0s;top: 37px;left: 66px;}.spin-effect8 div:nth-child(2) {animation-delay: -0.1s;top: 22px;left: 62px;}.spin-effect8 div:nth-child(3) {animation-delay: -0.2s;top: 11px;left: 52px;}.spin-effect8 div:nth-child(4) {animation-delay: -0.3s;top: 7px;left: 37px;}.spin-effect8 div:nth-child(5) {animation-delay: -0.4s;top: 11px;left: 22px;}.spin-effect8 div:nth-child(6) {animation-delay: -0.5s;top: 22px;left: 11px;}.spin-effect8 div:nth-child(7) {animation-delay: -0.6s;top: 37px;left: 7px;}.spin-effect8 div:nth-child(8) {animation-delay: -0.7s;top: 52px;left: 11px;}.spin-effect8 div:nth-child(9) {animation-delay: -0.8s;top: 62px;left: 22px;}.spin-effect8 div:nth-child(10) {animation-delay: -0.9s;top: 66px;left: 37px;}.spin-effect8 div:nth-child(11) {animation-delay: -1s;top: 62px;left: 52px;}.spin-effect8 div:nth-child(12) {animation-delay: -1.1s;top: 52px;left: 62px;}@keyframes spin-effect8 {0%, 20%, 80%, 100% {transform: scale(1);}50% {transform: scale(1.5);}}"
+        },
+        {
+         "id": 9,
+         "content":  ".spin-effect9 {display: inline-block;position: relative;width: 80px;height: 80px;left:50%;transform:translateX(-50%);}.spin-effect9 div {position: absolute;top: 33px;width: 13px;height: 13px;border-radius: 50%;background: #fff;animation-timing-function: cubic-bezier(0, 1, 1, 0);}.spin-effect9 div:nth-child(1) {left: 8px;animation: spin-effect91 0.6s infinite;}.spin-effect9 div:nth-child(2) {left: 8px;animation: spin-effect92 0.6s infinite;}.spin-effect9 div:nth-child(3) {left: 32px;animation: spin-effect92 0.6s infinite;}.spin-effect9 div:nth-child(4) {left: 56px;animation: spin-effect93 0.6s infinite;}@keyframes spin-effect91 {0% {transform: scale(0);}100% {transform: scale(1);}}@keyframes spin-effect93 {0% {transform: scale(1);}100% {transform: scale(0);}}@keyframes spin-effect92 {0% {transform: translate(0, 0);}100% {transform: translate(24px, 0);}}"
+        },
+        {
+         "id": 10,
+         "content":  ".spin-effect10 {display: inline-block;position: relative;width: 80px;height: 80px;left: 50%;transform: translateX(-50%);}.spin-effect10 div {position: absolute;border: 4px solid #fff;opacity: 1;border-radius: 50%;animation: spin-effect10 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;}.spin-effect10 div:nth-child(2) {animation-delay: -0.5s;}@keyframes spin-effect10 {0% {top: 36px;left: 36px;width: 0;height: 0;opacity: 0;}4.9% {top: 36px;left: 36px;width: 0;height: 0;opacity: 0;}5% {top: 36px;left: 36px;width: 0;height: 0;opacity: 1;}100% {top: 0px;left: 0px;width: 72px;height: 72px;opacity: 0;}}"
+        },
+        {
+         "id": 11,
+         "content":  ".spin-effect11,.spin-effect11:before,.spin-effect11:after {border-radius: 50%;width: 2em;height: 2em;-webkit-animation-fill-mode: both;animation-fill-mode: both;-webkit-animation: spin-effect11 1.8s infinite ease-in-out;animation: spin-effect11 1.8s infinite ease-in-out;}.spin-effect11 {color: #faf9f9;font-size: 10px;margin: 80px auto;position: relative;text-indent: -9999em;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation-delay: -0.16s;animation-delay: -0.16s;}.spin-effect11:before,.spin-effect11:after {content: '';position: absolute;top: 0;}.spin-effect11:before {left: -3em;-webkit-animation-delay: -0.32s;animation-delay: -0.32s;}.spin-effect11:after {left: 3em;}@keyframes spin-effect11 {0%,80%,100% {box-shadow: 0 2em 0 -1.3em;}40% {box-shadow: 0 2em 0 0;}}"
+        },
+        {
+         "id": 12,
+         "content":  ".spin-effect12 {display: inline-block;position: relative;width: 80px;height: 80px;left: 50%;transform: translateX(-50%);}.spin-effect12 div {transform-origin: 40px 40px;animation: spin-effect12 1.2s linear infinite;}.spin-effect12 div:after {content:'';display: block;position: absolute;top: 3px;left: 37px;width: 6px;height: 18px;border-radius: 20%;background: #fff;}.spin-effect12 div:nth-child(1) {transform: rotate(0deg);animation-delay: -1.1s;}.spin-effect12 div:nth-child(2) {transform: rotate(30deg);animation-delay: -1s;}.spin-effect12 div:nth-child(3) {transform: rotate(60deg);animation-delay: -0.9s;}.spin-effect12 div:nth-child(4) {transform: rotate(90deg);animation-delay: -0.8s;}.spin-effect12 div:nth-child(5) {transform: rotate(120deg);animation-delay: -0.7s;}.spin-effect12 div:nth-child(6) {transform: rotate(150deg);animation-delay: -0.6s;}.spin-effect12 div:nth-child(7) {transform: rotate(180deg);animation-delay: -0.5s;}.spin-effect12 div:nth-child(8) {transform: rotate(210deg);animation-delay: -0.4s;}.spin-effect12 div:nth-child(9) {transform: rotate(240deg);animation-delay: -0.3s;}.spin-effect12 div:nth-child(10) {transform: rotate(270deg);animation-delay: -0.2s;}.spin-effect12 div:nth-child(11) {transform: rotate(300deg);animation-delay: -0.1s;}.spin-effect12 div:nth-child(12) {transform: rotate(330deg);animation-delay: 0s;}@keyframes spin-effect12 {0% {opacity: 1;}100% {opacity: 0;}}"
+        }
+     ],
+    "item":
+        [
+            {
+                "id": 1,
+                "title": "Audio",
+                "classname": "audio-effect1",
+                "childElement": [
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>"
+                ],
+                "source": ["full", "html", "css"],
+                "framework": ["css", "tailwind"]
+
+            },
+            {
+                "id": 2,
+                "title": "Audio",
+                "classname": "audio-effect2",
+                "childElement": [
+                    "<div class='effects2 middle'></div>",
+                    "<div class='effects2 adjacent'></div>",
+                    "<div class='effects2'></div>",
+                    "<div class='effects2'></div>",
+                    "<div class='effects2'></div>",
+                    "<div class='effects2'></div>",
+                    "<div class='effects2'></div>",
+                    "<div class='effects2'></div>",
+                    "<div class='effects2'></div>",
+                    "<div class='effects2'></div>",
+                    "<div class='effects2'></div>",
+                    "<div class='effects2 adjacent'></div>"
+                ],
+                "source": ["full", "html", "css", "js"],
+                "framework": ["css", "tailwind"]
+
+            },
+            {
+                "id": 3,
+                "title": "Audio",
+                "classname": "audio-effect3",
+                "childElement": [
+                    "<div class='effects3 middle'></div>",
+                    "<div class='effects3'></div>",
+                    "<div class='effects3'></div>",
+                    "<div class='effects3'></div>",
+                    "<div class='effects3'></div>",
+                    "<div class='effects3'></div>",
+                    "<div class='effects3'></div>",
+                    "<div class='effects3'></div>",
+                    "<div class='effects3'></div>",
+                    "<div class='effects3'></div>",
+                    "<div class='effects3'></div>",
+                    "<div class='effects3 adjacent'></div>"
+                ],
+                "source": ["full", "html", "css", "js"],
+                "framework": ["css", "tailwind"]
+
+            },
+            {
+                "id": 4,
+                "title": "Spin",
+                "classname": "spin-effect4",
+                "childElement": [
+                    "<div></div>"
+                ],
+                "source": ["full", "html", "css"],
+                "framework": ["css", "tailwind"]
+
+            },
+            {
+                "id": 5,
+                "title": "Spin",
+                "classname": "spin-effect5",
+                "childElement": [
+                    "<div></div>"
+                ],
+                "source": ["full", "html", "css"],
+                "framework": ["css", "tailwind"]
+
+            },
+            {
+                "id": 6,
+                "title": "Spin",
+                "classname": "spin-effect6",
+                "childElement": [
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>"
+                ],
+                "source": ["full", "html", "css"],
+                "framework": ["css", "tailwind"]
+
+            },
+            {
+                "id": 7,
+                "title": "Spin",
+                "classname": "spin-effect7",
+                "childElement": [
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>"
+                ],
+                "source": ["full", "html", "css"],
+                "framework": ["css", "tailwind"]
+
+            },
+            {
+                "id": 8,
+                "title": "Spin",
+                "classname": "spin-effect8",
+                "childElement": [
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>"
+                ],
+                "source": ["full", "html", "css"],
+                "framework": ["css", "tailwind"]
+
+            },
+            {
+                "id": 12,
+                "title": "Spin",
+                "classname": "spin-effect12",
+                "childElement": [
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>"
+                ],
+                "source": ["full", "html", "css"],
+                "framework": ["css", "tailwind"]
+
+            },
+            {
+                "id": 9,
+                "title": "Spin",
+                "classname": "spin-effect9",
+                "childElement": [
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>",
+                    "<div></div>"
+                ],
+                "source": ["full", "html", "css"],
+                "framework": ["css", "tailwind"]
+
+            },
+            {
+                "id": 11,
+                "title": "Spin",
+                "classname": "spin-effect11",
+                "childElement": [
+                    "<div></div>"
+                ],
+                "source": ["full", "html", "css"],
+                "framework": ["css", "tailwind"]
+
+            },
+            {
+                "id": 10,
+                "title": "Wave",
+                "classname": "spin-effect10",
+                "childElement": [
+                    "<div></div>",
+                    "<div></div>"
+                ],
+                "source": ["full", "html", "css"],
+                "framework": ["css", "tailwind"]
+
+            }
+        ]
+
+}
