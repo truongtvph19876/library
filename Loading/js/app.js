@@ -1,13 +1,15 @@
-let select = document.querySelector('#selectLib');
-
-
-import db from "./db.json" assert {type: "json"}
 
 let items = document.querySelector('.items');
 let style =document.querySelector('style')
-export default scriptRender(db.script)
-style.innerText = styleRender(db.style)
+let script =document.querySelector('#script')
+
+// import scripts from './app.js';
+import db from "./db.json" assert {type: "json"}
+
+// export default scriptRender(db.script)
 items.innerHTML = effectRender(db);
+style.innerText = styleRender(db.style)
+script.innerText = scriptRender(db.script);
 
 
 // function

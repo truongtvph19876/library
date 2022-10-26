@@ -1,5 +1,3 @@
-let select = document.querySelector('#selectLib');
-
 
 
 let closeNote = document.querySelector('#close-note');
@@ -10,10 +8,7 @@ let paste = document.querySelector('#paste-note');
 let copy = document.querySelector('#copy-note');
 let deleteNote = document.querySelector('#delete-note');
 let textarea = document.querySelector('#textarea');
-let script =document.querySelector('#script')
 
-import scripts from './app.js';
-script.innerText = scripts;
 
 
 document.addEventListener('click', function(e){
@@ -47,8 +42,6 @@ paste.addEventListener('click', function(){
         resolve(navigator.clipboard.readText())
     })
     text.then(function(result){
-        console.log(result);
-    
         textarea.innerText = result;
     })
 });

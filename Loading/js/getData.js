@@ -1,8 +1,3 @@
-let select = document.querySelector('#selectLib');
-
-select.addEventListener('change', (e)=> {
-    console.log(e);
-})
 
 import db from "./db.json" assert {type: "json"}
 
